@@ -1,2 +1,10 @@
-com\mycompany\simulador\Processo.class
-com\mycompany\simulador\Simulador.class
+config\Configuracao.class
+generator\GeradorProcessos.class
+util\Estatisticas.class
+scheduler\FilaEspera.class
+scheduler\FilaPronto.class
+util\Log.class
+model\Processo.class
+com\mycompany\simulador\Main.class
+io\GerenciadorIO.class
+scheduler\Escalonador.class
