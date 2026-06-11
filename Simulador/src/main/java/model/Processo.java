@@ -67,7 +67,7 @@ public class Processo extends Thread {
                     turnaround = (int)(decorrido / Configuracao.VELOCIDADE_MS + 0.5);
                     espera = turnaround - duracao;
                     Escalonador.incrementarFinalizados();
-                    Escalonador.liberarNucleo();   // libera o núcleo ao terminar
+                    Escalonador.liberarNucleo();  
                 } else {
                     if (new Random().nextInt(100) < 30) {
                         tempoRestanteIO = 1 + new Random().nextInt(3);
@@ -76,7 +76,7 @@ public class Processo extends Thread {
                         Escalonador.liberarNucleo();
                     } else {
                         estado = "READY";
-                        FilaPronto.add(this);      // recoloca na fila de prontos
+                        FilaPronto.add(this);    
                         Escalonador.liberarNucleo();
                     }
                 }
